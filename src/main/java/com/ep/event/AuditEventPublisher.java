@@ -18,7 +18,7 @@ public class AuditEventPublisher {
         Map<String, String> data = CommonUtils.requestData();
         data.put("message", message);
 
-
+        // idea中的快捷键跳转按钮
         applicationEventPublisher.publishEvent(new AuditEvent(LogData.builder().dataMap(data).build()));
     }
 }
